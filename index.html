@@ -7,34 +7,36 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="wrapper">
-      <div class="left-sidebar">
-        <ul class="sidebar-top">
-          <li><a href="#"><button class="fa fa-google green"></button></a></li>
-        </ul>
-        <ul class="sidebar-center">
-          <li><a href="#"><button class="fa fa-th-large margintop25vh grey-color"></button></a></li>
-          <li><a href="#"><button class="fa fa-share-alt grey-color"></button></a></li>
+    <div class="page-container">
+      <nav class="left-sidebar">
+        <ul>
+          <li class="sidebar-top"><a href="#"><button><i class="fa fa-google green"></i></button></a></li>
+          <li class="sidebar-center"><ul><li ><a href="#"><button class="fa fa-th-large margintop25vh grey-color"></button></a></li>
+          <li ><a href="#"><button class="fa fa-share-alt grey-color"></button></a></li>
           <li class="highlight"><a href="#"><button class="fa fa-users grey-color"></button></a></li>
-          <li><a href="#"><button class="fa fa-list-ul grey-color"></button></a></li>
+          <li><a href="#"><button class="fa fa-list-ul grey-color"></button></a></li> </ul></li>
+          <li class="sidebar-bottom"><a href="#"><button class="fa fa-bars grey-color"></button></a></li>
         </ul>
-        <ul class="sidebar-bottom">
-          <li><a href="#"><button class="fa fa-bars grey-color"></button></a></li>
-        </ul>
-      </div>
-      <div class="page">
-        <div class="topnav">
-          <button class="search-icon fa fa-search"></button>
-          <input type="text" placeHolder="Search for.." class="search-bar font-grey-color"/>
-          <div class="topnav-right">
-            <a href="#"><img src="bee.jpeg" class="profile-pic"></img></a>
-            <a href="#">
-              <div class="profile-name">Charlotte Hornets<i class="fa fa-caret-down pad-left-2px"></i></div>
-            </a>
-            <a href="#"><button class="fa fa-bell-o"><span class="badge-notify">2</span></button></a>
-            <a href="#"><button class="fa fa-life-ring"></button></a>
-          </div>
-        </div>
+      </nav>
+      <div class="container">
+        <nav class="topnav">
+          <ul>
+          <li class="topnav-left">
+            <button class="search-icon fa fa-search"></button>
+            <input type="text" placeHolder="Search for.." class="search-bar font-grey-color"/>
+          </li>
+          <li class="topnav-right">
+            <ul>
+            <li><a href="#"><img src="bee.jpeg" class="profile-pic"></img></a>
+            <li><a href="#">
+              <div class="profile-name">Charlotte Hornets<i class="fa fa-caret-down"></i></div>
+            </a></li>
+            <li><a href="#"><button class="fa fa-bell-o"><span class="badge-notify">2</span></button></a></li>
+            <li><a href="#"><button class="fa fa-life-ring"></button></a></li>
+            </ul>
+          </li>
+          </ul>
+        </nav>
         <div class="page-content">
           <div class="main-content">
             <div class="content-header">
@@ -49,8 +51,6 @@
             <div class="content">
               <div class="content-heading">
                 <div class="content-heading-name">Charlotte Hornets</div>
-                <hr>
-                </hr>
               </div>
               <div class="payments">
                 <div class="card red">
@@ -62,7 +62,7 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #1
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     Groundwork even takes care of reminding parents.
@@ -84,7 +84,7 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #2
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     Groundwork even takes care of reminding parents.
@@ -106,7 +106,7 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #3
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     All the payment information that you and your team parents.
@@ -120,10 +120,9 @@
                   </div>
                 </div>
               </div>
+              </br>
               <div class="content-heading">
                 <div class="content-heading-name">Charlotte Hornets Academy</div>
-                <hr>
-                </hr>
               </div>
               <div class="academy">
                 <div class="card orange">
@@ -135,7 +134,7 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #1
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     All the payment information that you and your team parents.
@@ -157,7 +156,7 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #2
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     Groundwork even takes care of reminding parents.
@@ -179,7 +178,73 @@
                   </div>
                   <div class="card-heading">
                     Practise Fee #1
-                    <i class="fa fa-pencil"></i>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
+                  </div>
+                  <div class="card-description">
+                    Groundwork even takes care of reminding parents.
+                  </div>
+                  <div class="action-buttons">
+                    <button class="bttn-red">Reminder</button><button class="bttn-white payment-button">Payment</button>
+                  </div>
+                  <div class="due-details">
+                    <i class="fa fa-exclamation-circle "></i>
+                    -20 days overdue
+                  </div>
+                </div>
+                <div class="card orange">
+                  <div class="settings">
+                    <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                  </div>
+                  <div class="amount" align="center">
+                    <div class="money-circle">$120</div>
+                  </div>
+                  <div class="card-heading">
+                    Practise Fee #1
+                    <a href="#"><i class="fa fa-pencil"></i></a>
+                  </div>
+                  <div class="card-description">
+                    All the payment information that you and your team parents.
+                  </div>
+                  <div class="action-buttons" align="center">
+                    <button class="bttn-white record-payment-button ">Record Payment</button>
+                  </div>
+                  <div class="due-details">
+                    <i class="fa fa-calendar-o "></i>
+                    5 days left
+                  </div>
+                </div>
+                <div class="card green">
+                  <div class="settings">
+                    <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                  </div>
+                  <div class="amount" align="center">
+                    <div class="money-circle">$200</div>
+                  </div>
+                  <div class="card-heading">
+                    Practise Fee #2
+                    <a href="#"><i class="fa fa-pencil"></i></a>
+                  </div>
+                  <div class="card-description">
+                    Groundwork even takes care of reminding parents.
+                  </div>
+                  <div class="action-buttons" align="center">
+                    <button class="bttn-white record-payment-button ">Record Payment</button>
+                  </div>
+                  <div class="due-details">
+                    <i class="fa fa-calendar-o "></i>
+                    10 days left
+                  </div>
+                </div>
+                <div class="card red">
+                  <div class="settings">
+                    <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                  </div>
+                  <div class="amount" align="center">
+                    <div class="money-circle">$100</div>
+                  </div>
+                  <div class="card-heading">
+                    Practise Fee #1
+                    <a href="#"><i class="fa fa-pencil"></i></a>
                   </div>
                   <div class="card-description">
                     Groundwork even takes care of reminding parents.
@@ -196,7 +261,7 @@
             </div>
           </div>
           <div class="right-sidebar">
-            <div class="info" align="center" >
+            <div class="info" align="center">
               <div class="letter-circle">
                 <div class="letters">SG</br><a href="#"><span class="badge-edit"><i class="fa fa-pencil grey-color"></i></span></a></div>
               </div>
@@ -220,13 +285,13 @@
                 <div class="width50 label"> Email</div>
                 <div class="width50 value"><a href="#" class="email-id">j-gilroy@gmail.com</a></div>
               </div>
-              <div class="email margintop10px">
+              <div class="email">
                 <div class="width50 label"> Phone</div>
                 <div class="width50 value"><a href="#" class="email-id">626-555-1234</a></div>
               </div>
               <button align="center" class="bttn-blue"><span class="fa fa-envelope-o"></span>Message Parent</button>
             </div>
-            <div class="history">
+            <div class="history-heading">
               <legend>History</legend>
             </div>
             <div class="history-details">
