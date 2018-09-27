@@ -1,13 +1,14 @@
 <html>
-
 <head>
   <title>
     UI Design
   </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <button data-effect="st-effect-1">Slide in on top</button>
   <div class="page-container">
     <nav class="left-sidebar">
       <ul>
@@ -27,24 +28,24 @@
       <nav class="topnav">
         <ul>
           <li class="topnav-left">
-            <button class="search-icon fa fa-search"></button>
-            <input type="text" placeHolder="Search for.." class="search-bar font-grey-color" />
+            <button class="search-icon fa fa-search v-align-center"></button>
+            <input type="text" placeHolder="Search for.." class="search-bar v-align-center font-grey-color" />
           </li>
-          <li class="topnav-right">
+          <li class="topnav-right v-align-center">
             <ul>
               <a href="#">
-                <li><img src="bee.jpeg" class="profile-pic"></img></li>
+                <li><img src="bee.jpeg" class="profile-pic border-radius-50  v-align-center"></img></li>
               </a>
-              <a href="#">
+              <a href="#" class="profile-name-link">
                 <li>
-                  <div class="profile-name">Charlotte Hornets<i class="fa fa-caret-down"></i></div>
+                  <div class="profile-name  v-align-center">Charlotte Hornets<i class="fa fa-caret-down"></i></div>
                 </li>
               </a>
               <a href="#">
-                <li><button class="fa fa-bell-o"><span class="badge-notify">2</span></button></li>
+                <li><button class="fa fa-bell-o  v-align-center"><span class="badge-notify border-radius-50">2</span></button></li>
               </a>
               <a href="#">
-                <li><button class="fa fa-life-ring"></button></li>
+                <li><button class="fa fa-life-ring v-align-center"></button></li>
               </a>
             </ul>
           </li>
@@ -53,12 +54,12 @@
       <div class="page-content">
         <div class="main-content">
           <div class="content-header">
-            <div class="heading black">
+            <div class="heading  v-align-center black">
               Serge's Payments
             </div>
-            <div class="heading-right">
+            <div class="heading-right  v-align-center">
               <button class="bttn-white payment-history "><b>Payment History</b></button>
-              <button class="bttn-green"><b>Add Payment</b></button>
+              <button class="bttn-green"><b class="add-payment-btn">Add Payment</b></button>
             </div>
           </div>
           <div class="content">
@@ -273,25 +274,25 @@
             </div>
           </div>
         </div>
-        <div class="right-sidebar">
+        <div class="right-sidebar" id="right-sidebar">
           <div class="info" align="center">
-            <div class="letter-circle">
-              <div class="letters">SG</br><a href="#"><span class="badge-edit"><i class="fa fa-pencil grey-color"></i></span></a></div>
+            <div class="letter-circle border-radius-50">
+              <div class="letters">SG</br><a href="#"><span class="badge-edit border-radius-50"><i class="fa fa-pencil grey-color"></i></span></a></div>
             </div>
             <div class="right-sidebar-name">Serge Gilroy</div>
             <div class="right-sidebar-city">Pasadena, CA</div>
-            <img src="bee.jpeg" class="image-circle right-sidebar-icon">
-            <img src="bee-alt.jpeg" class="image-circle right-sidebar-icon">
+            <img src="bee.jpeg" class="image-circle right-sidebar-icon border-radius-50">
+            <img src="bee-alt.jpeg" class="image-circle right-sidebar-icon border-radius-50">
           </div>
           <div class="parents" align="center">
             <legend>Parents</legend>
             <div class="parents-details">
               <div class="half-width">
-                <div class="letter-circle-icon">
+                <div class="letter-circle-icon border-radius-50">
                   <div class="icon-letters">JG</div>
                 </div>
               </div>
-              <div class="margin-right-100 black">January Gilroy</div>
+              <div class="parent-name black">January Gilroy</div>
             </div>
             </br>
             <div class="email">
@@ -353,6 +354,10 @@
     </div>
   </div>
 </body>
+<script>
 
-
+    </script>
+         
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </html>
