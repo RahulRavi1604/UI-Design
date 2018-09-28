@@ -4,24 +4,23 @@
     UI Design
   </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <button data-effect="st-effect-1">Slide in on top</button>
   <div class="page-container">
     <nav class="left-sidebar">
       <ul>
         <li class="sidebar-top"><a href="#"><button class="green"><i class="fa fa-google"></i></button></a></li>
         <li class="sidebar-center">
           <ul>
-            <li><a href="#"><button class="fa fa-th-large margintop25vh grey-color"></button></a></li>
-            <li><a href="#"><button class="fa fa-share-alt grey-color"></button></a></li>
-            <li class="active"><a href="#"><button class="fa fa-users grey-color"></button></a></li>
-            <li><a href="#"><button class="fa fa-list-ul grey-color"></button></a></li>
+            <li><a href="#"><button><i class="fa fa-th-large margintop25vh grey-color"></i></button></a></li>
+            <li><a href="#"><button><i class="fa fa-share-alt grey-color"></i></button></a></li>
+            <li class="active"><a href="#"><button><i class="fa fa-users grey-color"></i></button></a></li>
+            <li><a href="#"><button><i class="fa fa-list-ul grey-color"></i></button></a></li>
           </ul>
         </li>
-        <li class="sidebar-bottom"><a href="#"><button class="fa fa-bars grey-color"></button></a></li>
+        <li class="sidebar-bottom"><a href="#"><button><i class="fa fa-bars grey-color"></i></button></a></li>
       </ul>
     </nav>
     <div class="container">
@@ -274,6 +273,7 @@
             </div>
           </div>
         </div>
+        <button id="ToggleButton" class="toggle-button"><i class="fa fa-angle-left"> </i></button>
         <div class="right-sidebar" id="right-sidebar">
           <div class="info" align="center">
             <div class="letter-circle border-radius-50">
@@ -284,12 +284,14 @@
             <img src="bee.jpeg" class="image-circle right-sidebar-icon border-radius-50">
             <img src="bee-alt.jpeg" class="image-circle right-sidebar-icon border-radius-50">
           </div>
-          <div class="parents" align="center">
+          <div class="parents">
             <legend>Parents</legend>
             <div class="parents-details">
               <div class="half-width">
+                <div class="letter-icon-container">
                 <div class="letter-circle-icon border-radius-50">
                   <div class="icon-letters">JG</div>
+                </div>
                 </div>
               </div>
               <div class="parent-name black">January Gilroy</div>
@@ -355,9 +357,20 @@
   </div>
 </body>
 <script>
+  document.getElementById("ToggleButton").addEventListener("click", function (e) {
+    var sidebar = document.getElementById("right-sidebar");
 
-    </script>
-         
+    if (sidebar.classList.contains("open")) {
+      sidebar.classList.remove("open");
+    } else {
+      sidebar.classList.add("open");
+    }
+    $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
+
+  });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </html>
