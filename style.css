@@ -1,4 +1,3 @@
-
 /****** Global Styles *********/
 
 html {
@@ -17,13 +16,11 @@ button {
 @font-face {
   font-family: 'FontAwesome';
   src: url( "FontAwesome.otf");
-
 }
 @font-face {
     font-family: ProximaNovaSoft-Semibold;
     src: url("ProximaNovaSoft-Semibold.otf") format("opentype");
 }
-
 div::-webkit-scrollbar-track {
   background-color: #f5f7f8 ;
 }
@@ -53,13 +50,12 @@ scrollbar[orient="vertical"] {
     color:#c0c0c0;
 }
 
-
 /****** General Styles *********/
 
 .border-radius-50 {
   border-radius:50%;
 }
-.green {
+button.green {
   color:#008000;
 }
 .grey-color {
@@ -171,13 +167,13 @@ nav.left-sidebar ul li button:hover {
 nav.left-sidebar ul li button:hover i {
   color:#fff;
 }
-nav.left-sidebar ul li.active button:hover {
+li.active button:hover {
   background:#4ac34a;
 }
-nav.left-sidebar ul li.active:hover {
+li.active:hover {
   border-left:2px groove #fff;
 }
-nav.left-sidebar ul li.active button:hover i {
+li.active button:hover i {
   color:#fff;
 }
 nav.left-sidebar ul li button {
@@ -203,7 +199,7 @@ nav.left-sidebar li.active button:hover {
 nav.left-sidebar ul  li.active button > i {
   color:#4ac34a;
 }
-nav.left-sidebar > ul > li.sidebar-top a button i.fa-google {
+a button i.fa-google {
   font-size:1.5rem;
   outline:none;
   height: 8.5%;
@@ -212,8 +208,6 @@ nav.left-sidebar > ul > li.sidebar-top a button i.fa-google {
   color:#afafaf;
   margin-left:1rem;
 }
-
-
 
 /****** TOP - NAV *********/
 
@@ -275,7 +269,7 @@ nav.topnav ul li.topnav-left {
   margin:0;
 }
 nav.topnav input.search-bar {
-  width:26%;
+  width:16%;
   border:none;
   height:1.75em;
   padding-left:0.7rem;
@@ -333,7 +327,7 @@ nav.topnav a:link,nav.topnav a:visited {
 
 /****** Right - Sidebar *********/
 
-.container .page-content .right-sidebar {
+.page-content .right-sidebar {
   background-color:#ffffff;
   width:21.5%;
   max-height:100%;
@@ -344,7 +338,7 @@ button.toggle-button {
   visibility: hidden;
 }
 
-.right-sidebar .info .letter-circle {
+.info .letter-circle {
   margin: 2.5% 36%;
   width: 5rem;
   height: 4rem;
@@ -354,36 +348,36 @@ button.toggle-button {
   border: none;
   padding:0.6rem;
 }
-.right-sidebar .info .letter-circle .letters {
+.info .letter-circle .letters {
   text-align: center;
   margin-top:24%;
 }
-.right-sidebar .info .right-sidebar-name {
+.info .right-sidebar-name {
   padding-top:1.5rem;
   font-size:1.2rem;
   color:#000000;
 }
-.right-sidebar .info .right-sidebar-city {
+.info .right-sidebar-city {
   padding-top:0.5rem;
   font-size:0.8rem;
 }
-.right-sidebar .info .letter-circle .letters a span.badge-edit {
+.letter-circle a span.badge-edit {
   background: #ffffff;
   position: relative;
   float:right;
   left: 0.5rem;
   bottom:0.2rem;
   font-size: 0.7rem;
-  padding: 11px;
+  padding: 11.75px;
 }
-.right-sidebar .info  img.right-sidebar-icon ,
- .right-sidebar .history-details .history-row .history-icon img.right-sidebar-icon {
+.info  img.right-sidebar-icon ,
+.history-icon img.right-sidebar-icon {
   height:2em;
   width:2em;
   margin-top:11px;
 }
-.right-sidebar .info  img.image-circle  , 
-.right-sidebar .history-details .history-row .history-icon img.image-circle  {
+.info  img.image-circle  , 
+.history-icon img.image-circle  {
   border: none;
 }
 .right-sidebar legend, .history {
@@ -394,7 +388,7 @@ button.toggle-button {
 .right-sidebar .parents .parents-details {
   display: flex;
 }
-.right-sidebar .parents .parents-details .half-width .letter-circle-icon {
+.half-width .letter-circle-icon {
   text-align:center;
   width: 1em;
   height: 1em;
@@ -403,46 +397,46 @@ button.toggle-button {
   border: none;
   padding:10px;
 }
-.right-sidebar .parents .parents-details .half-width .letter-circle-icon .icon-letters {
+.letter-circle-icon .icon-letters {
   text-align: center;
   margin:0px 3px 2px 0px;
   float:left;
 }
-.right-sidebar .parents .parents-details .half-width {
+.parents-details .half-width {
   width: 50%;
 }
-.right-sidebar .parents .parents-details .half-width .letter-icon-container {
+.half-width .letter-icon-container {
   width: 30%;
   margin:auto;
 }
-.right-sidebar .parents .parents-details .parent-name {
+.parents-details .parent-name {
   font-size:0.8rem; 
   text-align: center;
   margin: auto;
 }
-.right-sidebar .parents .email {
+.parents .email {
   text-align:center;
   display:flex;
   margin-bottom:5px;
 }
-.right-sidebar .parents .email .parents-contact {
+.email .parents-contact {
   display: inline-block;
 }
-.right-sidebar .parents .email .parents-contact a.email-id {
+.parents-contact a.email-id {
   text-decoration:none;
   color:#0452e0;
   font-size:0.75rem;
 }
-.right-sidebar .parents  button span.fa-envelope-o {
+.parents  button span.fa-envelope-o {
   padding-right:16px;
   color:#95c5ff;
 }
-.right-sidebar .parents .email .label {
+.parents .email .label {
   width: 45%;
   font-size:0.85rem;
   text-align:center;
 }
-.right-sidebar .parents .email .value {
+.parents .email .value {
   width: 55%;
   font-size: 0.7rem;
   text-align:center;
@@ -455,34 +449,35 @@ button.toggle-button {
   overflow: scroll;
   font-size: 0.8rem;
 }
-.right-sidebar .history-details .history-row {
+.history-details .history-row {
   width:100%;
 }
-.right-sidebar .history-details .history-row .history-icon {
+.history-row .history-icon {
   display:inline;
 }
-.right-sidebar .history-details .history-row .history-icon img {
+.history-row .history-icon img {
   border-radius: 50%;
 }
-.right-sidebar .history-details .history-row .history-detail {
+.history-row .history-detail {
   margin:15px 0px 0px 15px;
   text-align:left;
   width: 75%;
   display: inline-block;
 }
-.right-sidebar .history-details .history-row .history-detail .history-detail-text {
+.history-detail .history-detail-text {
   display:block;
   font-size: 0.8rem;
 
 }
-.right-sidebar .history-details .history-row .history-detail .history-detail-date {
+ .history-detail .history-detail-date {
   display:inline-block;
 }
-.right-sidebar .history-details .greyscale {
+.history-details .greyscale {
     -webkit-filter: grayscale(75%);
     filter: grayscale(75%);
 }
-.right-sidebar .history-details .history-row .history-detail .history-detail-text a:link , .history-detail-text  a:visited {
+.history-detail-text a:link ,
+ .history-detail-text  a:visited {
   color:#6c94dd;
 }
 
@@ -490,21 +485,23 @@ button.toggle-button {
 
 /****** Content *********/
 
-.page-container .container .page-content .main-content {
+.page-content .main-content {
   background-color:#f5f7f8;
   width: 76.5%;
   padding-left: 2%;
   box-shadow: 0px 100px 3px 0px rgba(226, 226, 226, 0.3);
+  max-height: 91vh;
 }
 .main-content .content-header {
-  height:8%;
+  height: 36px;
   display:block;
+  margin-top: 15px;
 }
-.main-content .content-header .heading {
+.content-header .heading {
   font-size: 25px;
   display: inline-block;
 }
-.main-content .content-header .heading-right {
+.content-header .heading-right {
   float:right;
   margin-right:7%;
 }
@@ -515,21 +512,23 @@ button.toggle-button {
   position: relative;
 }
 .main-content .content {
-  max-height:80%;
+  max-height:82.4vh;
   width:98%;
+  margin:10px 0px;
   overflow-y:scroll;
   margin:8px 0px 0px 15px;
 }
-.main-content .content .content-heading {
+.content .content-heading {
   display:inline-flex;
 }
-.main-content .content .content-heading .content-heading-name {
+.content-heading .content-heading-name {
   float:left;
   font-size:14px;
   padding-right:5px;
   margin: 15px 10px;
 }
-.main-content .content .payments,.main-content .content .academy {
+.content .payments,
+.content .academy {
   width: 100%;
   margin: 0 auto;
   display:grid;
@@ -537,7 +536,8 @@ button.toggle-button {
   grid-template-columns: repeat(auto-fill, minmax(max-content, 21.3rem));
   justify-content: center;
 }
-.main-content .content .payments::after,.main-content .content .academy::after {
+.main-content .content .payments::after,
+.main-content .content .academy::after {
   content: "";
   clear: both;
   display: table;
@@ -551,96 +551,88 @@ button.toggle-button {
   float: left;
   background-color: #fff;
   transition: box-shadow .3s;
-
 }
-.main-content .content .card:hover {
+.content .card:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
-.main-content .content .card .settings {
+.card .settings {
   float:right;
   margin:10px 10px 0px 0px;
 }
-.main-content .content .card .amount {
+.content .card .amount {
   height:2.5rem;
   width:100%;
   margin-bottom:7%;
 }
-.main-content .content .card .amount  .money-circle {
+.card .amount  .money-circle {
   margin: 3.5% 0px 0px calc(50% - 29px);
   border-radius: 50%;
   width: 35px;
   height: 1.5rem;
   font-size: 19px;
   border: none;
-  padding-left: 13px;
-  padding-bottom: 13px;
-  padding-right: 16px;
-  padding-top: 18px;
+  padding: 18px 16px 13px 13px;
+  text-align: center;
 }
-.content .payments .red .money-circle,
-.content .payments,
-.content .academy .red .money-circle,
-.content .payments .red .due-details,
-.content .payments,
-.content  .academy .red .due-details {
+.red .due-details,
+.red .due-details {
   color:#e74062;
   font-weight:bold;
 }
-.content .payments .green .money-circle,
-.content .payments,
-.content  .academy .green .money-circle,
-.content .payments .orange .money-circle,
-.content .payments,
-.content  .academy .orange .money-circle,
-.content .payments .red .money-circle,
-.content .payments,
-.content .academy .red .money-circle {
-  background-color: #f4f9e9;
-}
-.content .payments .green .money-circle,
-.content .payments,
-.content  .academy .green .money-circle,
-.content .payments .green .due-details,
-.content .payments,
-.content  .academy .green .due-details {
+.green .due-details,
+.green .due-details {
   color:#50c350;
   font-weight:bold;
 }
-.content .payments .orange .money-circle,
-.content .payments,
-.content  .academy .orange .money-circle,
-.content .payments .orange .due-details,
-.content .payments,
-.content  .academy .orange .due-details {
+.orange .due-details,
+.orange .due-details {
   color:#fb9f24;
   font-weight:bold;
 }
+.orange .money-circle,
+.orange .money-circle {
+  color:#fb9f24;
+  font-weight:bold;
+  background-color: #fcf5e0;
+}
+.green .money-circle,
+.green .money-circle {
+  color:#50c350;
+  font-weight:bold;
+  background-color:#f7fcec;
+}
+.red .money-circle,
+.red .money-circle {
+  color:#e74062;
+  font-weight:bold;
+  background-color: #faf2f2;
+}
+
 .fa-calendar-o {
   color:#afafaf;
 }
-.content  .card .settings i {
+.card .settings i {
   color:#afafaf;
   font-size:17px;
 }
-.content  .card .card-heading {
+.card .card-heading {
   font-weight:bold;
   color:#000;
   text-align:center;
   margin-bottom:7px;
 }
-.content  .card .card-description {
+.card .card-description {
   text-align:center;
   line-height:1.6em;
-  color:#afafaf;
   padding-left: 25px;
   padding-right: 25px;
 }
-.content  .card .action-buttons {
+.card .action-buttons {
   text-align:center;
   margin-top:25px;
 }
-.content  .card .action-buttons .bttn-red {
+.action-buttons .bttn-red {
   color:#fff;
   background-color:#e3324c;
   border-radius:5%;
@@ -649,16 +641,16 @@ button.toggle-button {
   font-size:11.85px;
   text-align:center;
 }
-.content  .card .due-details {
+.card .due-details {
   margin-top:34px;
   text-align:center;
 }
-.content  .card .action-buttons button.payment-button {
+ .action-buttons button.payment-button {
   height:2.5rem;
   width:7.4rem;
   margin-left:15px;
 }
-.content  .card .action-buttons button.record-payment-button {
+ .action-buttons button.record-payment-button {
   height: 2.5rem;
   width:9.5rem;
 }
@@ -671,43 +663,41 @@ button.toggle-button {
 
 /* Media Queries */
 @media screen and (max-width: 1000px) {
-#right-sidebar {
-  position: fixed;
-  width: 40%;
-  padding: 0px 15px;
-  height: 100%;
-  top: 8%;
-  right: 0;
-  transform: translateX(100%);
-  transition: transform 0.75s;
-}
-button.toggle-button {
-  visibility: visible;
-  position: fixed;
-  z-index: 2;
-  top: 88%;
-  right: 2.75%;
-  background-color: #eee;
-  height: 39px;
-  width: 37px;
-  border-radius: 50%;
-  outline: none;
-}
-#right-sidebar.open {
-  transform: translateX(0);
-}
-
-  .page-container .container .page-content .main-content {
+  #right-sidebar {
+    position: fixed;
+    width: 40%;
+    padding: 0px 15px;
+    height: 100%;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.75s; 
+  }
+  button.toggle-button {
+    visibility: visible;
+    position: fixed;
+    z-index: 2;
+    top: 88%;
+    right: 2.75%;
+    background-color: #eee;
+    height: 39px;
+    width: 37px;
+    border-radius: 50%;
+    outline: none; 
+  }
+  #right-sidebar.open {
+    transform: translateX(0); 
+  }
+  .page-content .main-content {
     width:100%;
   }
-  .page-container .container .page-content nav.topnav {
+  .page-content nav.topnav {
     width:100%;
   }
-  .right-sidebar .history-details .history-row .history-detail {
+  .history-row .history-detail {
     margin: 5px 0px 0px 11px;
     font-size: 11.5px;
   }
-  .main-content .content-header .heading {
+  .content-header .heading {
     font-size:16px;
   }
   .heading-right button.payment-history {
@@ -719,21 +709,17 @@ button.toggle-button {
   }
 }
 @media screen and (max-width: 566px) {
-
-  .content .card .action-buttons button.record-payment-button {
-  height: 1.5rem;
-  width: 8.4rem;
+  .action-buttons button.record-payment-button {
+    height: 1.5rem;
+    width: 8.4rem;
   }
-  .content .card .action-buttons .bttn-red {
+  .action-buttons .bttn-red {
     height:1.5rem;
     width:5.4rem;
     margin-left:15px;
     margin-bottom:5px;
   }
-  nav.topnav {
-    height: 4.5%;
-  }
-  .content .card .action-buttons button.payment-button {
+  .action-buttons button.payment-button {
     height: 1.5rem;
     width:5.4rem;
   }
@@ -743,9 +729,9 @@ button.toggle-button {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
   }
-.topnav .topnav-left input.search-bar:focus {
-    width: 26%;
-}
+  .topnav-left input.search-bar:focus {
+    width: 31%;
+  }
   button.toggle-button {
     visibility: visible;
     position: fixed;
@@ -773,7 +759,6 @@ button.toggle-button {
   nav.left-sidebar {
     width: auto;
     display: block;
-    height: 8%;
     float: none;
     width: 100%;
   }
@@ -786,7 +771,6 @@ button.toggle-button {
   nav.left-sidebar > ul > li {
     display: inline;
     min-height: auto;
-    max-height: 8%;
   }
   nav.left-sidebar > ul > li.sidebar-top {
     min-height: auto;
@@ -796,7 +780,6 @@ button.toggle-button {
     display: inline-block;
     height:auto;
     min-height: auto;
-    max-height: 8%;
     text-align:center;
     width:10%;
   }
@@ -827,7 +810,7 @@ button.toggle-button {
     width: 100%;
     height: 92%;
   }
-  .container .topnav-right ul a.profile-name-link {
+  .topnav-right ul a.profile-name-link {
     display: none;
   }
   nav.topnav ul > li.topnav-right > ul > a > li {
@@ -852,40 +835,41 @@ button.toggle-button {
     margin-left: -2px;
     font-size: 9.9px;
     }
-  .main-content .content-header .heading {
-    font-size:13px;
+  .content-header .heading {
+    font-size:15px;
     float: left;
     margin:0;
   }
-  .main-content .content-header .heading-right {
+  .content-header .heading-right {
     margin:0;
     float: right;
   }
   .main-content .content-header {
     display:block;
-    margin: 0px 20px 0px 25px;
+    margin: 15px 20px 0px 25px;
   }
-  .main-content .content .card {
+  .content .card {
     margin: 0;
     width: 93%;
-  }
-  nav.topnav ul > li.topnav-right > ul {
-    height:50%;
+    height:16.5rem;
   }
   .container img.profile-pic {
     height: 1.2em;
+    position: relative;
+    top: -5px;
   }
-  .main-content .content .payments,.main-content .content .academy {
+  .content .payments,
+  .content .academy {
     width: 100%;
     margin: 0 auto;
     display:inline-block;
    }
 }
-@media screen and (max-width: 335px) {
-  .content .card .due-details {
+@media screen and (max-width: 355px) {
+  .card .due-details {
     margin-top: 5px 
   }
-  .heading-right button.payment-history > div {
+  button.payment-history > div {
     display: none;
   }
   .heading-right button.payment-history {
@@ -897,7 +881,7 @@ button.toggle-button {
      content: "\f1da";
      font-family: FontAwesome;
      position:absolute;
-     margin:-28% 0px 0px -24%;
+     margin:-7px 0px 0px -7px;
      font-size: 16px;
    }
    .heading-right button.bttn-green > div {
@@ -913,6 +897,6 @@ button.toggle-button {
      font-family: FontAwesome;
      position:absolute;
      font-size: 16px;
-     margin:-12% 0px 0px -11%;
+     margin:-7px 0px 0px -7px;
    }
 }

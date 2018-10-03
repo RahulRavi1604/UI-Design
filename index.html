@@ -35,7 +35,7 @@
           <li class="topnav-right">
             <ul>
               <a href="#">
-                <li class="m-r-20"><img src="bee.jpeg" class="profile-pic border-radius-50 "></img></li>
+                <li class="m-r-20"><img src="bee.jpeg" class="profile-pic border-radius-50 "></li>
               </a>
               <a href="#" class="profile-name-link">
                 <li class="m-r-20">
@@ -53,12 +53,12 @@
         </ul>
       </nav>
       <div class="page-content">
-        <div class="main-content">
+        <div id="main-content" class="main-content">
           <div class="content-header">
-            <div class="heading  v-align-center black">
+            <div class="heading  black v-align-center">
               Serge's Payments
             </div>
-            <div class="heading-right  v-align-center">
+            <div class="heading-right">
               <button class="bttn-white payment-history ">
                 <div>Payment History</div>
               </button>
@@ -139,7 +139,6 @@
                 </div>
               </div>
             </div>
-            </br>
             <div class="content-heading">
               <div class="content-heading-name">Charlotte Hornets Academy</div>
             </div>
@@ -283,7 +282,8 @@
         <div class="right-sidebar" id="right-sidebar">
           <div class="info">
             <div class="letter-circle border-radius-50">
-              <div class="letters">SG</br><a href="#"><span class="badge-edit border-radius-50"><i class="fa fa-pencil grey-color"></i></span></a></div>
+              <div class="letters">SG</div>
+              <a href="#"><span class="badge-edit border-radius-50"><i class="fa fa-pencil grey-color"></i></span></a>
             </div>
             <div class="right-sidebar-name text-align-center">Serge Gilroy</div>
             <div class="right-sidebar-city text-align-center">Pasadena, CA</div>
@@ -304,7 +304,6 @@
               </div>
               <div class="parent-name black">January Gilroy</div>
             </div>
-            </br>
             <div class="email">
               <div class="parents-contact label"> Email</div>
               <div class="parents-contact value"><a href="#" class="email-id">j-gilroy@gmail.com</a></div>
@@ -372,12 +371,23 @@
 
     if (sidebar.classList.contains("open")) {
       sidebar.classList.remove("open");
+      $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
     } else {
       sidebar.classList.add("open");
+      $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
     }
-    $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
-
   });
+  var body = document.getElementById("main-content");
+  var sidebar = document.getElementById("right-sidebar");
+  body.addEventListener("click", function () {
+    if (sidebar.classList.contains("open")) {
+      sidebar.classList.remove("open");
+      $("#ToggleButton").find('i').toggleClass('fa-angle-left fa-angle-right');
+    } 
+}, false);
+sidebar.addEventListener("click", function (ev) {
+    ev.stopPropagation();
+}, false);
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
