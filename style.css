@@ -12,6 +12,12 @@ html {
 }
 button {
   border:none;
+  outline:none;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url( "FontAwesome.otf");
+
 }
 @font-face {
     font-family: ProximaNovaSoft-Semibold;
@@ -23,7 +29,7 @@ div::-webkit-scrollbar-track {
 }
 div::-webkit-scrollbar {
   width: 5px;
-  height: 10px;
+  height: 5px;
   background-color: #808080;
 }
 div::-webkit-scrollbar-thumb {
@@ -60,7 +66,7 @@ scrollbar[orient="vertical"] {
   color:#c5cbd0;
 }
 .black {
-  color:#000000;
+  color:#2e2d2d;
 }
 button.bttn-white {
   color:#80838a;
@@ -70,12 +76,15 @@ button.bttn-white {
   background-color:#f5f7f8;
   border-radius:5%;
 }
-button.bttn-green {
-  color:#ffff;
-  background-color:#51c75b;
-  border-radius:5%;
+.heading-right button.bttn-green {
+  color: #ffff;
+  background-color: #51c75b;
+  border-radius: 5%;
   height: 2.3rem;
   width: 11rem;
+  border-color: #51c75b;
+  border-style: solid;
+  border-width: 2px;
 }
 button.bttn-blue {
   margin:auto;
@@ -98,12 +107,18 @@ button.bttn-blue {
 .m-r-20 {
   margin-right:20px;
 }
+.text-align-center {
+  text-align: center;
+}
+button:hover, a:hover {
+  cursor: pointer;
+}
 
 /****** LEFT - NAV *********/
 
 .page-container {
   display:block;
-  overflow:hidden;
+  overflow:scroll;
 }
 .page-container .container {
   display:inline-block;
@@ -116,7 +131,7 @@ nav.left-sidebar {
 nav.left-sidebar > ul {
   margin: 0;
   padding: 0;
-  width:4.5%;
+  width:4.4%;
   float:left;
 }
 nav.left-sidebar > ul > li > ul {
@@ -140,7 +155,7 @@ nav.left-sidebar > ul > li.sidebar-bottom {
 }
 nav.left-sidebar > ul > li.sidebar-center > ul {
   list-style-type:none;
-  padding-left: 5px;
+  padding-left: 0px;
   width: 100%;
 }
 nav.left-sidebar > ul > li.sidebar-center > ul > li {
@@ -150,9 +165,24 @@ nav.left-sidebar > ul > li.sidebar-center > ul > li {
   width: 100%;
   margin: 0 0 50% 0;
 }
-nav.left-sidebar  ul  li button {
+nav.left-sidebar ul li button:hover {
+  background:#4ac34a;
+}
+nav.left-sidebar ul li button:hover i {
+  color:#fff;
+}
+nav.left-sidebar ul li.active button:hover {
+  background:#4ac34a;
+}
+nav.left-sidebar ul li.active:hover {
+  border-left:2px groove #fff;
+}
+nav.left-sidebar ul li.active button:hover i {
+  color:#fff;
+}
+nav.left-sidebar ul li button {
   list-style-type:none;
-  width: 100%;
+  width: 95%;
   height:60px;
   float: left;
   display: flex;
@@ -165,8 +195,7 @@ nav.left-sidebar a button{
   background-color:#ffffff;
 }
 nav.left-sidebar li.active {
-  border-left:groove;
-  border-left-color:#4ac34a;
+  border-left:2px groove #4ac34a;
 }
 nav.left-sidebar li.active button:hover {
   background-color:#ffffff;
@@ -189,22 +218,19 @@ nav.left-sidebar > ul > li.sidebar-top a button i.fa-google {
 /****** TOP - NAV *********/
 
 nav.topnav {
+  padding:1%;
+  height: auto;
   overflow: hidden;
   background-color: #ffffff;
-  min-height:8.5%;
 }
-nav.topnav ul {
+nav.topnav >  ul {
   margin: 0;
-  width:100%;
   padding:0;
-  height: 8.5%;
 }
 nav.topnav ul > li.topnav-left {
   max-width:50%;
   margin: 0;
-  display: inline-block;
-  height: 8.5%;
-
+  display: inline;
 }
 nav.topnav ul > li.topnav-right {
   display:inline-flex;
@@ -236,7 +262,7 @@ nav.topnav ul > li.topnav-right > ul > a > li {
   padding-right: 0.2rem;
 }
 .container img.profile-pic {
-  height: 1.6em;
+  height: 1.4em;
 }
 nav.topnav input.placeholder {
     color:#c5cbd0;
@@ -247,7 +273,6 @@ nav.topnav input:focus::-webkit-input-placeholder {
 }
 nav.topnav ul li.topnav-left {
   margin:0;
-  display:inline;
 }
 nav.topnav input.search-bar {
   width:26%;
@@ -313,12 +338,14 @@ nav.topnav a:link,nav.topnav a:visited {
   width:21.5%;
   max-height:100%;
   margin-left:1em;
+  overflow-y: scroll;
 }
 button.toggle-button {
   visibility: hidden;
 }
+
 .right-sidebar .info .letter-circle {
-  margin-top: 2.5%;
+  margin: 2.5% 36%;
   width: 5rem;
   height: 4rem;
   font-size: 1.5rem;
@@ -332,7 +359,7 @@ button.toggle-button {
   margin-top:24%;
 }
 .right-sidebar .info .right-sidebar-name {
-  padding-top:2rem;
+  padding-top:1.5rem;
   font-size:1.2rem;
   color:#000000;
 }
@@ -359,7 +386,7 @@ button.toggle-button {
 .right-sidebar .history-details .history-row .history-icon img.image-circle  {
   border: none;
 }
-.right-sidebar .parents legend, .history {
+.right-sidebar legend, .history {
   margin-top:20px;
   font-size:1rem;
   text-align:left;
@@ -398,11 +425,10 @@ button.toggle-button {
   display:flex;
   margin-bottom:5px;
 }
-.right-sidebar .parents .email .width50 {
-  width:50%;
+.right-sidebar .parents .email .parents-contact {
   display: inline-block;
 }
-.right-sidebar .parents .email .width50 a.email-id {
+.right-sidebar .parents .email .parents-contact a.email-id {
   text-decoration:none;
   color:#0452e0;
   font-size:0.75rem;
@@ -412,10 +438,12 @@ button.toggle-button {
   color:#95c5ff;
 }
 .right-sidebar .parents .email .label {
+  width: 45%;
   font-size:0.85rem;
   text-align:center;
 }
 .right-sidebar .parents .email .value {
+  width: 55%;
   font-size: 0.7rem;
   text-align:center;
 }
@@ -432,6 +460,9 @@ button.toggle-button {
 }
 .right-sidebar .history-details .history-row .history-icon {
   display:inline;
+}
+.right-sidebar .history-details .history-row .history-icon img {
+  border-radius: 50%;
 }
 .right-sidebar .history-details .history-row .history-detail {
   margin:15px 0px 0px 15px;
@@ -477,13 +508,14 @@ button.toggle-button {
   float:right;
   margin-right:7%;
 }
-.main-content .content-header .heading-right .payment-history {
+.heading-right button.payment-history {
   margin:0px 30px 0px 0px;
   height: 2.3rem;
   width: 11rem;
+  position: relative;
 }
 .main-content .content {
-  max-height:85%;
+  max-height:80%;
   width:98%;
   overflow-y:scroll;
   margin:8px 0px 0px 15px;
@@ -495,13 +527,15 @@ button.toggle-button {
   float:left;
   font-size:14px;
   padding-right:5px;
-  margin: 17px;
+  margin: 15px 10px;
 }
 .main-content .content .payments,.main-content .content .academy {
   width: 100%;
   margin: 0 auto;
-  display:inline-block;
+  display:grid;
   background-color: #f5f7f8;
+  grid-template-columns: repeat(auto-fill, minmax(max-content, 21.3rem));
+  justify-content: center;
 }
 .main-content .content .payments::after,.main-content .content .academy::after {
   content: "";
@@ -516,6 +550,11 @@ button.toggle-button {
   border: 1px solid #eee;
   float: left;
   background-color: #fff;
+  transition: box-shadow .3s;
+
+}
+.main-content .content .card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .main-content .content .card .settings {
@@ -528,9 +567,9 @@ button.toggle-button {
   margin-bottom:7%;
 }
 .main-content .content .card .amount  .money-circle {
-  margin-top: 3.5%;
+  margin: 3.5% 0px 0px calc(50% - 29px);
   border-radius: 50%;
-  width: 13%;
+  width: 35px;
   height: 1.5rem;
   font-size: 19px;
   border: none;
@@ -602,7 +641,6 @@ button.toggle-button {
   margin-top:25px;
 }
 .content  .card .action-buttons .bttn-red {
-  border:none;
   color:#fff;
   background-color:#e3324c;
   border-radius:5%;
@@ -632,8 +670,7 @@ button.toggle-button {
 }
 
 /* Media Queries */
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1000px) {
 #right-sidebar {
   position: fixed;
   width: 40%;
@@ -673,19 +710,47 @@ button.toggle-button {
   .main-content .content-header .heading {
     font-size:16px;
   }
-  .heading-right button, 
-  .main-content .content-header .heading-right .payment-history {
+  .heading-right button.payment-history {
     width:8rem;
     margin-right:10px;
   }
+  .heading-right button.bttn-green {
+    width:8rem;
+  }
 }
+@media screen and (max-width: 566px) {
 
-@media screen and (max-width: 480px) {
+  .content .card .action-buttons button.record-payment-button {
+  height: 1.5rem;
+  width: 8.4rem;
+  }
+  .content .card .action-buttons .bttn-red {
+    height:1.5rem;
+    width:5.4rem;
+    margin-left:15px;
+    margin-bottom:5px;
+  }
+  nav.topnav {
+    height: 4.5%;
+  }
+  .content .card .action-buttons button.payment-button {
+    height: 1.5rem;
+    width:5.4rem;
+  }
+  .topnav .topnav-left input.search-bar {
+    width: 46px;
+    padding-left:0px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+.topnav .topnav-left input.search-bar:focus {
+    width: 26%;
+}
   button.toggle-button {
     visibility: visible;
     position: fixed;
     visibility: visible;
-    z-index: 2;
+    z-index: 5;
     top: 88%;
     right: 5.75%;
     background-color: #eee;
@@ -773,18 +838,20 @@ button.toggle-button {
     top: 50%;
     transform: translateY(50%);
   }
-  .heading-right button.bttn-green ,
-   .main-content .content-header .heading-right .payment-history {
+  .heading-right button.payment-history {
     width: 89px;
-    height: 30px;
+    height: 25px;
     margin: 0;
     margin-left: -2px;
-    font-size: 9.05px;
-    font-weight: 550;
+    font-size: 9.9px;
   }
-  .add-payment-btn {
-    font-weight: 550;
-  }
+  .heading-right button.add-payment-btn {
+    width: 89px;
+    height: 25px;
+    margin: 0;
+    margin-left: -2px;
+    font-size: 9.9px;
+    }
   .main-content .content-header .heading {
     font-size:13px;
     float: left;
@@ -796,7 +863,7 @@ button.toggle-button {
   }
   .main-content .content-header {
     display:block;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 25px;
   }
   .main-content .content .card {
     margin: 0;
@@ -808,4 +875,44 @@ button.toggle-button {
   .container img.profile-pic {
     height: 1.2em;
   }
+  .main-content .content .payments,.main-content .content .academy {
+    width: 100%;
+    margin: 0 auto;
+    display:inline-block;
+   }
+}
+@media screen and (max-width: 335px) {
+  .content .card .due-details {
+    margin-top: 5px 
+  }
+  .heading-right button.payment-history > div {
+    display: none;
+  }
+  .heading-right button.payment-history {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+   .heading-right button.payment-history:after {
+     content: "\f1da";
+     font-family: FontAwesome;
+     position:absolute;
+     margin:-28% 0px 0px -24%;
+     font-size: 16px;
+   }
+   .heading-right button.bttn-green > div {
+    display: none;
+  }
+  .heading-right button.bttn-green {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+   .heading-right button.bttn-green:after {
+     content: "\f055";
+     font-family: FontAwesome;
+     position:absolute;
+     font-size: 16px;
+     margin:-12% 0px 0px -11%;
+   }
 }
